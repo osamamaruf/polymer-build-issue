@@ -17,16 +17,24 @@ $ polymer build
 
 ## Issue
 
-Removing the lazy import 
+As the the lazy import 
 
 ```
 <link rel="lazy-import" href="../../common/libs/lodash.html">
 
 ```
 
-from the app shell (`src/components/my-app/my-app.html`) causes the build to silently fail. 
+from the app shell (`src/components/my-app/my-app.html`) has been removed. It will cause the 
+
+``` 
+$ polymer build 
+
+```
+
+command to fail.
 
 The behavior has been tested on polymer-cli version 1.8.0.
 
+
 ## Note
-Interestingly, if the polymer element import (being done via cdn) is being done via bower components then the build does not fail even if the lazy import is removed.
+Interestingly, if the polymer element import (being done via cdn) is being done via bower components then the build does not fail.
