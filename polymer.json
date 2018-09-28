@@ -1,0 +1,28 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/components/my-app/my-app.html",
+  "fragments": [ 	  
+  ],
+  "sources": [
+  	"src/components/**/*",
+  	"src/common/**/*",    
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  },
+  "builds": [
+    {
+      "preset": "es5-bundled",
+      "js": {"minify": true,"compile": true},
+      "css": {"minify": true},
+      "html": {"minify": true},
+      "addServiceWorker": true,
+      "addPushManifest": true
+    }
+  ]
+}
